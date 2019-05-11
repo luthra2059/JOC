@@ -16,7 +16,7 @@ driver = webdriver.Firefox(executable_path=r'Z:\python\driver\geckodriver.exe') 
 
 driver.get("https:/web.whatsapp.com/")
 wait = WebDriverWait(driver,600)
-target = '"+91 75649 72281"'           #Enter the target name within double quotes
+target = '" <target name same as in your whatsapp> "'           #Enter the target name within double quotes
 msg = "Message sent using Python"      #The message you want to send
 x_arg = '//span[contains(@title,'+ target + ')]'
 target = wait.until(EC.presence_of_element_located((By.XPATH, x_arg)))
